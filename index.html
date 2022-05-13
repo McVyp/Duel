@@ -1,0 +1,79 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/Huntress/Spear.png">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div style=" display:inline-block; position: relative;">
+        <div 
+        style="
+            position: absolute; 
+            display: flex; 
+            width: 100%; 
+            align-items: center;
+            padding: 20px;
+            "
+        >
+            <!--player healthbar-->
+            <div style="position: relative; width: 100%; display: flex; justify-content: flex-end; border: 4px solid white; border-right-style: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                <div 
+                    style="background-color: #d53220; height: 30px; width: 100%;">
+                </div>
+                <div id="player-health"  style="position: absolute; background-color: #C084FC; top:0; right: 0; bottom: 0; width: 100%;"></div>
+            </div>
+            <!--timer-->
+            <div 
+                id="timer"
+                style="
+                    background-color: #CBD5E1; 
+                    width: 100px; 
+                    height: 50px; 
+                    flex-shrink: 0;
+                    color: black;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    border: 4px solid white; border-top-left-radius: 5px; border-bottom-left-radius: 5px;
+                    "
+                >
+                 10
+            </div>
+            <!--foe healthbar-->
+            <div style="position: relative; border: 4px solid white; border-left-style: none; border-top-right-radius: 5px; border-bottom-right-radius: 5px; width: 100%;">
+                <div 
+                    style="background-color: #d53220; height: 30px;">
+                </div>
+                <div id="foe-health"  style="position: absolute; background-color: #C084FC; top:0; right: 0; bottom: 0; left: 0;"></div>
+            </div>
+        </div>
+        <div 
+            id="display"
+            style="
+            position: absolute; 
+            color: white;  
+            align-items: center; 
+            justify-content: center; 
+            top: 0;
+            right: 0; 
+            bottom: 0; 
+            left: 0; 
+            display: none;
+            " 
+        >Tie</div>
+        <canvas></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/classes.js"></script>
+<script src="index.js"></script>
+</body>
+
